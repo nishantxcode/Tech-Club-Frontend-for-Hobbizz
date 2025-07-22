@@ -54,10 +54,10 @@ import Navbar from "../../Navbar/page"
 
 
 
-export default function ArtClubHomepage() {
+export default function TechClubHomepage() {
   const [isFloatingMenuOpen, setIsFloatingMenuOpen] = useState(false)
   const [memberCount, setMemberCount] = useState(0)
-  const [artworkCount, setArtworkCount] = useState(0)
+  const [techworkCount, setTechworkCount] = useState(0)
   const [eventCount, setEventCount] = useState(0)
   const [isLoaded, setIsLoaded] = useState(false)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
@@ -84,7 +84,7 @@ export default function ArtClubHomepage() {
 
     setTimeout(() => {
       animateCounter(setMemberCount, 250)
-      animateCounter(setArtworkCount, 1200)
+      animateCounter(setTechworkCount, 1200)
       animateCounter(setEventCount, 45)
     }, 1000)
 
@@ -126,10 +126,10 @@ export default function ArtClubHomepage() {
 
 
   const events = [
-    { id: 1, title: "Digital Art Workshop", date: "2024-01-15", time: "2:00 PM", type: "Workshop" },
-    { id: 2, title: "Spring Art Exhibition", date: "2024-01-22", time: "10:00 AM", type: "Exhibition" },
+    { id: 1, title: "Digital Tech Workshop", date: "2024-01-15", time: "2:00 PM", type: "Workshop" },
+    { id: 2, title: "Spring Tech Exhibition", date: "2024-01-22", time: "10:00 AM", type: "Exhibition" },
     { id: 3, title: "Portrait Drawing Contest", date: "2024-01-28", time: "3:00 PM", type: "Contest" },
-    { id: 4, title: "Art Therapy Session", date: "2024-02-05", time: "4:00 PM", type: "Session" },
+    { id: 4, title: "Tech Therapy Session", date: "2024-02-05", time: "4:00 PM", type: "Session" },
   ]
 
   const cabinetMembers = [
@@ -138,7 +138,7 @@ export default function ArtClubHomepage() {
     { name: "Aravind Srinivasan", role: "Editor", image: "/avatars/3.JPG?height=200&width=200" },
   ]
 
-  const artForms = [
+  const techForms = [
     {
       name: "ISRO",
       description: "Indian Space Research Organisation. India’s space agency known for cost-effective and impactful space missions.",
@@ -157,7 +157,7 @@ export default function ArtClubHomepage() {
   ]
 
 
-  const GoToArtAuthPage = () => {
+  const GoToTechAuthPage = () => {
     router.push("/TechClub/Auth/SignIn")
   }
   return (
@@ -174,7 +174,7 @@ export default function ArtClubHomepage() {
         </div>
       </div>
 
-      {/* Artistic Background Elements */}
+      {/* Techies Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 w-32 h-32 bg-blue-500 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute top-1/3 right-20 w-24 h-24 bg-blue-600 rounded-full blur-lg animate-pulse"></div>
@@ -194,7 +194,7 @@ export default function ArtClubHomepage() {
         <button
           className="px-5 py-2 rounded-full text-white font-medium shadow-md hover:shadow-lg transition-all duration-300"
           style={{ backgroundColor: "#1447e6" }}
-          onClick={() => { GoToArtAuthPage() }}
+          onClick={() => { GoToTechAuthPage() }}
         >
           Join Club
         </button>
@@ -228,7 +228,7 @@ export default function ArtClubHomepage() {
                   // onClick={() => {
                   //   document.getElementById("join-section")?.scrollIntoView({ behavior: "smooth" })
                   // }}
-                  onClick={() => { GoToArtAuthPage() }}
+                  onClick={() => { GoToTechAuthPage() }}
                 >
                   <Sparkles className="w-5 h-5 mr-2" />
                   Join the Tech Club
@@ -264,8 +264,8 @@ export default function ArtClubHomepage() {
               <div className="text-blue-100">Active Members</div>
             </div>
             <div className="space-y-2 hover:scale-105 transition-transform duration-300 cursor-pointer p-4 rounded-lg hover:bg-blue-500/30 border-2 border-transparent hover:border-blue-300">
-              <div className="text-4xl font-bold">{artworkCount}+</div>
-              <div className="text-blue-100">Artworks Created</div>
+              <div className="text-4xl font-bold">{techworkCount}+</div>
+              <div className="text-blue-100">Tech Projects Created</div>
             </div>
             <div className="space-y-2 hover:scale-105 transition-transform duration-300 cursor-pointer p-4 rounded-lg hover:bg-blue-500/30 border-2 border-transparent hover:border-blue-300">
               <div className="text-4xl font-bold">{eventCount}+</div>
@@ -275,7 +275,7 @@ export default function ArtClubHomepage() {
         </div>
       </section>
 
-      {/* About the Art Club */}
+      {/* About the Tech Club */}
       <section
         className={`py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 transition-all duration-1000 ${visibleSections.has("about-section") ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
         id="about-section"
@@ -329,7 +329,7 @@ export default function ArtClubHomepage() {
             </Card>
           </div>
 
-          {/* Famous Artists Inspiration */}
+          {/* Famous Tech Inspiration */}
           <div className="bg-blue-50 rounded-3xl p-8">
             <h3 className="text-2xl font-bold text-center mb-8 text-black">Draw Inspiration from the Tech Icons</h3>
             <div className="grid md:grid-cols-3 gap-6">
@@ -422,25 +422,25 @@ export default function ArtClubHomepage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {artForms.map((artForm, index) => (
+            {techForms.map((techForm, index) => (
               <Card
                 key={index}
                 className="bg-white hover:shadow-xl hover:shadow-blue-200/50 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 border-2 border-transparent hover:border-blue-400 hover:bg-blue-50/30"
               >
                 <CardContent className="p-0">
                   <Image
-                    src={artForm.image || "/placeholder.svg"}
-                    alt={artForm.name}
+                    src={techForm.image || "/placeholder.svg"}
+                    alt={techForm.name}
                     width={300}
                     height={200}
                     className="w-full h-48 object-cover rounded-t-lg"
                   />
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-black mb-3" style={{ userSelect: "text" }}>
-                      {artForm.name}
+                      {techForm.name}
                     </h3>
                     <p className="text-gray-700" style={{ userSelect: "text" }}>
-                      {artForm.description}
+                      {techForm.description}
                     </p>
                   </div>
                 </CardContent>
