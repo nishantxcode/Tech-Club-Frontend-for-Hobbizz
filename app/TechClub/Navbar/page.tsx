@@ -34,7 +34,7 @@ function Navbar() {
 
         // If user has a club assigned
         if (parsedUser.club && parsedUser.district) {
-          fetch(`${process.env.NEXT_PUBLIC_API_URL}/${parsedUser.club}/gethead?district=${parsedUser.district}`)
+          fetch(`http://localhost:3000/${parsedUser.club}/gethead?district=${parsedUser.district}`)
             .then((res) => res.json())
             .then((data) => {
               // If there's a head set in club and compare with logged-in user id
@@ -59,32 +59,32 @@ function Navbar() {
   }, [])
 
   const logout = () => {
-    router.push("/CraftClub/Auth/SignIn")
+    router.push("/TechClub/Auth/SignIn")
     localStorage.clear()
   }
 
   const gotojoinclub = () => {
-    router.push("/CraftClub/CABINATE/JoinClub")
+    router.push("/TechClub/CABINATE/JoinClub")
   }
 
   const navOptions: Record<NavType, NavItem[]> = {
     default: [
-      { name: "Home", icon: HomeIcon, action: () => router.push("/CraftClub/home") },
-      { name: "Local Events", icon: Flag, action: () => router.push("/CraftClub/DISTRICT/LocalEventsDisplayPage") },
-      { name: "Participate", icon: School, action: () => router.push("/CraftClub/ParticipateInActivity") },
-      { name: "Apply for Club", icon: Bell, action: () => router.push("/CraftClub/CABINATE/JoinClub") },
+      { name: "Home", icon: HomeIcon, action: () => router.push("/TechClub/home") },
+      { name: "Local Events", icon: Flag, action: () => router.push("/TechClub/DISTRICT/LocalEventsDisplayPage") },
+      { name: "Participate", icon: School, action: () => router.push("/TechClub/ParticipateInActivity") },
+      { name: "Apply for Club", icon: Bell, action: () => router.push("/TechClub/CABINATE/JoinClub") },
     ],
     head: [
-      { name: "Home", icon: HomeIcon, action: () => router.push("/CraftClub/home") },
-      { name: "Manage Events", icon: Flag, action: () => router.push("/CraftClub/DISTRICT/LocalEvents") },
-      { name: "Manage Ambassadors", icon: School, action: () => router.push(`/CraftClub/DISTRICT/ManageAmbassadors`) },
-      { name: "Manage Schools", icon: School, action: () => router.push(`/CraftClub/DISTRICT/ManageSchools`) },
+      { name: "Home", icon: HomeIcon, action: () => router.push("/TechClub/home") },
+      { name: "Manage Events", icon: Flag, action: () => router.push("/TechClub/DISTRICT/LocalEvents") },
+      { name: "Manage Ambassadors", icon: School, action: () => router.push(`/TechClub/DISTRICT/ManageAmbassadors`) },
+      { name: "Manage Schools", icon: School, action: () => router.push(`/TechClub/DISTRICT/ManageSchools`) },
     ],
     ambassador: [
-      { name: "Home", icon: HomeIcon, action: () => router.push("/CraftClub/home") },
-      { name: "Local Events", icon: Flag, action: () => router.push("/CraftClub/DISTRICT/LocalEventsDisplayPage") },
-      { name: "Club Info", icon: Sparkles, action: () => router.push("/CraftClub/DISTRICT/ClubInfo") },
-      { name: "Manage Students", icon: School, action: () => router.push("/CraftClub/DISTRICT/ManageStudents") },
+      { name: "Home", icon: HomeIcon, action: () => router.push("/TechClub/home") },
+      { name: "Local Events", icon: Flag, action: () => router.push("/TechClub/DISTRICT/LocalEventsDisplayPage") },
+      { name: "Club Info", icon: Sparkles, action: () => router.push("/TechClub/DISTRICT/ClubInfo") },
+      { name: "Manage Students", icon: School, action: () => router.push("/TechClub/DISTRICT/ManageStudents") },
     ],
   }
 
@@ -105,7 +105,7 @@ function Navbar() {
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
               <span
-                onClick={() => router.push("/CraftClub/home")}
+                onClick={() => router.push("/TechClub/home")}
                 className="text-xl font-bold text-gray-800 cursor-pointer"
               >
                 HOBBIZZ

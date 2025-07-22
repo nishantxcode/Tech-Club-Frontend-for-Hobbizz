@@ -7,8 +7,8 @@ function page() {
   const router = useRouter();
 
 
-  const GoToArtAuthPage = () => {
-    router.push("/Components/Auth/SignIn")
+  const GoToTechAuthPage = () => {
+    router.push("/TechClub/Auth/SignIn")
   }
 
   return (
@@ -24,7 +24,7 @@ function page() {
         <button
           className="px-5 py-2 rounded-full text-white font-medium shadow-md hover:shadow-lg transition-all duration-300"
           style={{ backgroundColor: "#1447e6" }}
-          onClick={() => { GoToArtAuthPage() }}
+          onClick={() => { GoToTechAuthPage() }}
         >
           Join Club
         </button>

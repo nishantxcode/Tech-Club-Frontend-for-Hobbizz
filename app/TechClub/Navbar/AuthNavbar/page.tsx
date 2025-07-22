@@ -34,20 +34,20 @@ export default function Navbar() {
     const router = useRouter();
   
     const GoToCabinateSignIn = () => {
-      router.push('/CraftClub/Auth/SignIn');
+      router.push('/TechClub/Auth/SignIn');
     };
     const GoToPrincipleSignIn = () => {
-      router.push('/CraftClub/Auth/PrincipleSignIn');
+      router.push('/TechClub/Auth/PrincipleSignIn');
     };
 
     const GoToEditorSignIn = () => {
-      router.push('/CraftClub/Auth/EditorSignIn');
+      router.push('/TechClub/Auth/EditorSignIn');
     };
     const GoToJudgeSignIn = () => {
-      router.push('/CraftClub/Auth/JudgeSignIn');
+      router.push('/TechClub/Auth/JudgeSignIn');
     };
     const GoToDirectorSignIn = () => {
-      router.push('/CraftClub/Auth/DistrictSignIn');
+      router.push('/TechClub/Auth/DistrictSignIn');
     };
 
     const GoToStartPage = () => {
