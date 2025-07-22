@@ -147,12 +147,12 @@ export default function ArtClubHomepage() {
     {
       name: "CDAC",
       description: "Centre for Development of Advanced Computing. Developers of India’s first supercomputer, advancing research and national tech capabilities.",
-      image: "/images/warli.JPG?height=200&width=300",
+      image: "/images/cdac.jpg?height=200&width=300",
     },
     {
       name: "DRDO",
       description: "Defence Research and Development Organisation. Driving innovation in defense systems, robotics, and aerospace engineering.",
-      image: "/images/Tanjore.JPG?height=200&width=300",
+      image: "/images/drdo.jpg?height=200&width=300",
     },
   ]
 
@@ -371,7 +371,7 @@ export default function ArtClubHomepage() {
               <span className="text-blue-600">Meet Our Leadership</span>
             </h2>
             <p className="text-xl text-gray-700" style={{ userSelect: "text" }}>
-              Dedicated mentors guiding your artistic journey
+              Dedicated mentors guiding your Tech journey
             </p>
           </div>
 
@@ -551,11 +551,11 @@ export default function ArtClubHomepage() {
                   <Trophy className="w-8 h-8 text-blue-600" />
                   {/* <Badge className="bg-blue-600 text-white">Active</Badge> */}
                 </div>
-                <CardTitle className="text-black">Monthly Art Challenge</CardTitle>
+                <CardTitle className="text-black">Monthly Tech Challenge</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 mb-4" style={{ userSelect: "text" }}>
-                  Theme: "Nature's Beauty" - Create artwork inspired by nature
+                  Theme: "Tech for Nature" – Build or code something inspired by the natural world
                 </p>
                 <div className="flex items-center justify-between">
                   {/* <span className="text-sm text-gray-600">Ends in 12 days</span> */}
@@ -578,11 +578,11 @@ export default function ArtClubHomepage() {
                   <Award className="w-8 h-8 text-blue-600" />
                   {/* <Badge className="bg-blue-600 text-white">Weekly</Badge> */}
                 </div>
-                <CardTitle className="text-black">Artist of the Week</CardTitle>
+                <CardTitle className="text-black">Innovator of the Week</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 mb-4" style={{ userSelect: "text" }}>
-                  Get featured and win exclusive art supplies
+                  Be spotlighted and win exciting tech gadgets or tools
                 </p>
                 <div className="flex items-center justify-between">
                   {/* <span className="text-sm text-gray-600">New winner every Monday</span> */}
@@ -605,11 +605,11 @@ export default function ArtClubHomepage() {
                   <Sparkles className="w-8 h-8 text-blue-600" />
                   <Badge className="bg-blue-600 text-white">Special</Badge>
                 </div>
-                <CardTitle className="text-black">Digital Art Showcase</CardTitle>
+                <CardTitle className="text-black">Digital Innovation Expo</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 mb-4" style={{ userSelect: "text" }}>
-                  Annual exhibition of best digital artworks
+                  Annual showcase of top tech projects and digital creations
                 </p>
                 <div className="flex items-center justify-between">
                   {/* <span className="text-sm text-gray-600">Submissions open</span> */}
@@ -653,7 +653,7 @@ export default function ArtClubHomepage() {
                 </div>
               </div>
               <p className="text-blue-200" style={{ userSelect: "text" }}>
-                Empowering students to explore their creative potential through art and community.
+                Empowering students to explore their creative potential and be a part of a speical community.
               </p>
             </div>
 
@@ -666,7 +666,7 @@ export default function ArtClubHomepage() {
                   About Club
                 </Link>
                 <Link href="#" className="block text-blue-200 hover:text-white transition-colors">
-                  Art Gallery
+                  Tech Gallery
                 </Link>
                 <Link href="#" className="block text-blue-200 hover:text-white transition-colors">
                   Events
@@ -684,7 +684,7 @@ export default function ArtClubHomepage() {
               <div className="space-y-2">
                 <div className="flex items-center space-x-2 text-blue-200">
                   <Mail className="w-4 h-4" />
-                  <span style={{ userSelect: "text" }}>artclub@edubiz.com</span>
+                  <span style={{ userSelect: "text" }}>techclub@edubiz.com</span>
                 </div>
                 <div className="flex items-center space-x-2 text-blue-200">
                   <Phone className="w-4 h-4" />
@@ -692,7 +692,7 @@ export default function ArtClubHomepage() {
                 </div>
                 <div className="flex items-center space-x-2 text-blue-200">
                   <MapPin className="w-4 h-4" />
-                  <span style={{ userSelect: "text" }}>Mumbai, India</span>
+                  <span style={{ userSelect: "text" }}>Ghaziabad, India</span>
                 </div>
               </div>
             </div>
@@ -705,21 +705,21 @@ export default function ArtClubHomepage() {
                 <Link
                   href="#"
                   className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-300/50 border-2 border-transparent hover:border-blue-300"
-                  onClick={() => window.open("https://facebook.com/artclub", "_blank")}
+                  onClick={() => window.open("https://facebook.com/Hobbizz", "_blank")}
                 >
                   <Facebook className="w-5 h-5" />
                 </Link>
                 <Link
                   href="#"
                   className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-300/50 border-2 border-transparent hover:border-blue-300"
-                  onClick={() => window.open("https://instagram.com/artclub", "_blank")}
+                  onClick={() => window.open("https://instagram.com/Hobbizz", "_blank")}
                 >
                   <Instagram className="w-5 h-5" />
                 </Link>
                 <Link
                   href="#"
                   className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-300/50 border-2 border-transparent hover:border-blue-300"
-                  onClick={() => window.open("https://twitter.com/artclub", "_blank")}
+                  onClick={() => window.open("https://twitter.com/Hobbizz", "_blank")}
                 >
                   <Twitter className="w-5 h-5" />
                 </Link>
@@ -729,7 +729,7 @@ export default function ArtClubHomepage() {
 
           <div className="border-t border-blue-800 mt-12 pt-8 text-center text-blue-200">
             <p style={{ userSelect: "text" }}>
-              &copy; 2024 EduBiz Network. All rights reserved. | Art Club - HOBBIZZ Platform
+              &copy; 2024 EduBiz Network. All rights reserved. | Tech Club - HOBBIZZ Platform
             </p>
           </div>
         </div>
