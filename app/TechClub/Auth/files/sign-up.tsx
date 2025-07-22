@@ -523,7 +523,8 @@ export default function CompleteRegistrationForm() {
 
     try {
       // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/cabinate-signup`, {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/CRAFTCABINATE-signup`, {
+      // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/CRAFTCABINATE-signup`, {
+      const response = await fetch(`http://localhost3000/TECHCABINATE-signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -550,7 +551,7 @@ export default function CompleteRegistrationForm() {
       }
 
       console.log(data)
-      router.push("/CraftClub/Auth/SignIn")
+      router.push("/TechClub/Auth/SignIn")
 
     } catch (error) {
       console.error("Network error:", error)
@@ -817,7 +818,7 @@ export default function CompleteRegistrationForm() {
             <p className="text-sm text-gray-600">
               Already have an account?
               <span 
-                onClick={() => { router.push("/CraftClub/Auth/SignIn") }} 
+                onClick={() => { router.push("/TechClub/Auth/SignIn") }} 
                 style={{ cursor: 'pointer' }} className="text-blue-600 hover:text-blue-700 font-medium">
                 Sign in
               </span>

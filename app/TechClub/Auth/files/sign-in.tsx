@@ -61,35 +61,35 @@ export default function SignIn() {
   const router = useRouter();
 
   const handleClick1 = () => {
-    router.push('/CraftClub/Auth/SignUp');
+    router.push('/TechClub/Auth/SignUp');
   };
   const gotoeditorSignup = () => {
-    router.push('/CraftClub/Auth/EditorSignup');
+    router.push('/TechClub/Auth/EditorSignup');
   };
   const gotoeditorSignin = () => {
-    router.push('/CraftClub/Auth/EditorSignIn');
+    router.push('/TechClub/Auth/EditorSignIn');
   };
 
 
   const GotoDashBoard = () => {
-    router.push('/CraftClub/home');
+    router.push('/TechClub/home');
   }
 
 
 
   const GotoJudgeSignup = () => {
-    router.push('/CraftClub/Auth/JudgeSignup');
+    router.push('/TechClub/Auth/JudgeSignup');
   }
   const GotoJudgeSignin = () => {
-    router.push('/CraftClub/Auth/JudgeSignIn');
+    router.push('/TechClub/Auth/JudgeSignIn');
   }
 
 
   const GotoPrincipleSignUp = () => {
-    router.push("/CraftClub/Auth/PrincipleSignUp")
+    router.push("/TechClub/Auth/PrincipleSignUp")
   }
   const GotoPrincipleSignIn = () => {
-    router.push("/CraftClub/Auth/PrincipleSignIn")
+    router.push("/TechClub/Auth/PrincipleSignIn")
   }
 
   
@@ -101,7 +101,7 @@ export default function SignIn() {
         //sending data to server
         // fetch("http://localhost:5000/cabinate-signin", {
         // fetch(`${process.env.NEXT_PUBLIC_API_URL}/CRAFTCABINATE-signin`, {
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/CRAFTCABINATE-signin`, {
+        fetch(`http://localhost3000/CRAFTCABINATE-signin`, {
             method: "post",
             headers: {
                 "Content-Type": "application/json",
