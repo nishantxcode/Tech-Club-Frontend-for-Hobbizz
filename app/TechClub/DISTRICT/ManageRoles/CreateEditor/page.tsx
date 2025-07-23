@@ -1,5 +1,5 @@
 "use client"
-
+// import "../../../../TechClub/Principle/PrincipleDashBoard"
 import type React from "react"
 
 import { useEffect, useState } from "react"
@@ -549,7 +549,7 @@ export default function SignUp() {
     )
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/CRAFTEDITOR-signup`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/TECHEDITOR-signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -577,7 +577,7 @@ export default function SignUp() {
       }
 
       console.log(data)
-      router.push("/Components/DISTRICT/DirectorDashboard")
+      router.push("/TechClub/Principle/PrincipleDashBoard")
 
     } catch (error) {
       console.error("Network error:", error)
@@ -834,7 +834,7 @@ export default function SignUp() {
                               <SelectValue placeholder="Select category" />
                             </SelectTrigger>
                             <SelectContent>
-                              {["craft"].map((category) => (
+                              {["Tech"].map((category) => (
                                 <SelectItem key={category} value={category}>
                                   {category}
                                 </SelectItem>

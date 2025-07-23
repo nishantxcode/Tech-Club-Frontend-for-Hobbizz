@@ -549,7 +549,8 @@ export default function SignUp() {
     )
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/CRAFTJUDGE-signup`, {
+      // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/CRAFTJUDGE-signup`, {
+      const response = await fetch(`http://localhost:5000/CRAFTJUDGE-signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -577,7 +578,7 @@ export default function SignUp() {
       }
 
       console.log(data)
-      router.push("/Components/Auth/SignIn")
+      router.push("/TechClub/Auth/SignIn")
 
     } catch (error) {
       console.error("Network error:", error)
@@ -835,7 +836,7 @@ export default function SignUp() {
                               <SelectValue placeholder="Select category" />
                             </SelectTrigger>
                             <SelectContent>
-                              {["artclub", "Photography", "dance"].map((category) => (
+                              {["Tech"].map((category) => (
                                 <SelectItem key={category} value={category}>
                                   {category}
                                 </SelectItem>

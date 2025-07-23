@@ -61,30 +61,31 @@ export default function SignIn() {
 
 
   const GotoDashBoard = () => {
-    router.push('/CraftClub/EDITOR/EditorDashboard');
+    router.push('/TechClub/EDITOR/EditorDashboard');
   }
   const GotoDashBoardDirector = () => {
-    router.push('/CraftClub/EDITOR/EditorDashboard');
+    router.push('/TechClub/EDITOR/EditorDashboard');
   }
   const GotoDistrictSignup = () => {
-    router.push('/CraftClub/Auth/DistricctSignUp');
+    router.push('/TechClub/Auth/DistricctSignUp');
   }
 
 
   const GotoJudgeDashBoard = () => {
-    router.push('/CraftClub/Judge/JudgeDashBoard');
+    router.push('/TechClub/Judge/JudgeDashBoard');
   }
 
 
   const GotoJudgeSignUp = () => {
-    router.push('/CraftClub/Auth/JudgeSignup');
+    router.push('/TechClub/Auth/JudgeSignup');
   }
 
   const postData = () => {
 
 
         //sending data to server
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/CRAFTJUDGE-signin`, {
+        // fetch(`${process.env.NEXT_PUBLIC_API_URL}/TECHJUDGE-signin`, {
+        fetch(`https://localhost:5000/TECHJUDGE-signin`, {
             method: "post",
             headers: {
                 "Content-Type": "application/json",

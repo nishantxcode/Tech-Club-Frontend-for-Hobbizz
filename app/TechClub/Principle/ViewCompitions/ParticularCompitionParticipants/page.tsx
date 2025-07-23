@@ -83,7 +83,7 @@ const [openImage, setOpenImage] = useState<string | null>(null);
       }
     }
 
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/craftgetCompitition/${id}`, {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/techgetCompitition/${id}`, {
       headers: {
         "Content-Type": "application/json",
       },

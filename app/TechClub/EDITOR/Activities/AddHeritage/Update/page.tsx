@@ -75,7 +75,7 @@ interface Heritage {
 
       try {
         // Replace with your actual fetch endpoint for getting a single heritage item
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/craftHeritage/${heritageId}`)
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/techHeritage/${heritageId}`)
         if (!response.ok) {
           throw new Error("Failed to fetch heritage")
         }
@@ -135,7 +135,8 @@ interface Heritage {
     setUpdating(true)
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/craftclub-heritage-update/${heritageId}`, {
+      // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/techclub-heritage-update/${heritageId}`, {
+      const response = await fetch(`http://localhost:5000/techclub-heritage-update/${heritageId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -155,7 +156,7 @@ interface Heritage {
       // })
 
       // Optionally redirect to heritage detail page or heritage list
-      router.push(`/CraftClub/EDITOR/Activities/AddHeritage`)
+      router.push(`/TechClub/EDITOR/Activities/AddHeritage`)
     } catch (error) {
       // toast({
       //   title: "Error",

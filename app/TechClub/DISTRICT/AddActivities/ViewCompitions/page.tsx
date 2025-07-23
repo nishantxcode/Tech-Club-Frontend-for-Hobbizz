@@ -33,7 +33,7 @@ export default function CompetitionsPage() {
   const fetchCompetitions = async () => {
     try {
       setLoading(true)
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/craftallCompitition`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/techallCompitition`, {
         headers: {
           "Authorization": "Bearer " + localStorage.getItem("jwt")
         },
@@ -94,10 +94,10 @@ export default function CompetitionsPage() {
   const router = useRouter();
 
   const handleClickSubmitId = (id: any) => {
-    router.push(`/CraftClub/DISTRICT/AddActivities/ViewCompitions/ParticularCompition?id=${id}`);
+    router.push(`/TechClub/DISTRICT/AddActivities/ViewCompitions/ParticularCompition?id=${id}`);
   };
   const handleClickSubmitId2 = (id: any) => {
-    router.push(`/CraftClub/DISTRICT/AddActivities/ViewCompitions/ParticularCompitionParticipants?id=${id}`);
+    router.push(`/TechClub/DISTRICT/AddActivities/ViewCompitions/ParticularCompitionParticipants?id=${id}`);
   };
 
 

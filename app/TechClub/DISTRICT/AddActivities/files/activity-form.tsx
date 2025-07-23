@@ -24,7 +24,7 @@ export default function ActivityForm() {
       const router = useRouter();
     
       const gotohome = () => {
-        router.push('/CraftClub/DISTRICT/DirectorDashboard');
+        router.push('/TechClub/DISTRICT/DirectorDashboard');
       };
     
     
@@ -104,7 +104,7 @@ export default function ActivityForm() {
 
 
     if (url) {
-      fetch(`${process.env.NEXT_PUBLIC_API_URL}/craftcreate-activity`, {
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/techcreate-activity`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",
@@ -301,7 +301,7 @@ export default function ActivityForm() {
                                         </SelectTrigger>
                                         <SelectContent className="bg-blue-600 border-white/20">
                                             <SelectItem value="art" className="text-white hover:bg-white/10 focus:bg-white/10">
-                                                🎨 Craft
+                                                Tech
                                             </SelectItem>
                                             {/* <SelectItem value="dance" className="text-white hover:bg-white/10 focus:bg-white/10">
                                                 💃 Dance

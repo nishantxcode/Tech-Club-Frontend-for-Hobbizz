@@ -61,13 +61,13 @@ export default function SignIn() {
 
 
   const GotoDashBoard = () => {
-    router.push('/CraftClub/EDITOR/EditorDashboard');
+    router.push('/TechClub/EDITOR/EditorDashboard');
   }
   const GotoDashBoardDirector = () => {
-    router.push('/CraftClub/EDITOR/EditorDashboard');
+    router.push('/TechClub/EDITOR/EditorDashboard');
   }
   const GotoEditorSignup = () => {
-    router.push('/CraftClub/Auth/EditorSignup');
+    router.push('/TechClub/Auth/EditorSignup');
   }
 
 
@@ -75,7 +75,8 @@ export default function SignIn() {
 
 
         //sending data to server
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/CRAFTEDITOR-signin`, {
+        // fetch(`${process.env.NEXT_PUBLIC_API_URL}/TECHEDITOR-signin`, {
+        fetch(`http://localhost:5000/TECHEDITOR-signin`, {
             method: "post",
             headers: {
                 "Content-Type": "application/json",

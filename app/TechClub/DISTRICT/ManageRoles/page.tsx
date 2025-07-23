@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+// import "../../../TechClub/DISTRICT/DirectorDashboard"
 
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
@@ -549,7 +550,7 @@ export default function SignUp() {
     )
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/CRAFTPRINCIPLE-signup`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/TECHPRINCIPLE-signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -577,7 +578,8 @@ export default function SignUp() {
       }
 
       console.log(data)
-      router.push("/Components/Auth/SignIn")
+      // router.push("/TechClub/Auth/SignIn")
+      router.push("/TechClub/DISTRICT/DirectorDashboard")
 
     } catch (error) {
       console.error("Network error:", error)
@@ -834,7 +836,7 @@ export default function SignUp() {
                               <SelectValue placeholder="Select category" />
                             </SelectTrigger>
                             <SelectContent>
-                              {[ "craft"].map((category) => (
+                              {[ "Tech"].map((category) => (
                                 <SelectItem key={category} value={category}>
                                   {category}
                                 </SelectItem>

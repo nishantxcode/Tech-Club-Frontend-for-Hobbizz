@@ -1,7 +1,7 @@
 "use client";
 import React from 'react'
 import { useSearchParams } from "next/navigation";
-import NavBar from "../../../CraftClub/DISTRICT/DirectorNavbar/page"
+import NavBar from "../DirectorNavbar/page"
 import { Suspense } from "react";
 
 import { Button } from "@/components/ui/button"
@@ -66,7 +66,7 @@ function DistrictParticularActivityInfoInner() {
       }
     }
 
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/craftgetactivity/${id}`, {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/techgetactivity/${id}`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -114,7 +114,7 @@ function DistrictParticularActivityInfoInner() {
     const fetchParticipants = async () => {
       try {
         const token = localStorage.getItem("jwt");
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/craftevent-participants/${id}`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/techevent-participants/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -139,7 +139,7 @@ function DistrictParticularActivityInfoInner() {
     const fetchApprovedUploads = async () => {
       try {
         setLoadingApproved(true);
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/craftactivity/approved-uploads/${event?._id}`);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/techactivity/approved-uploads/${event?._id}`);
         const data = await res.json();
         setApprovedUploads(data.approvedUploads || []);
       } catch (error) {
@@ -256,7 +256,7 @@ function DistrictParticularActivityInfoInner() {
 
       if (result.url) {
         const token = localStorage.getItem("jwt");
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/craftupload-photo/${id}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/techupload-photo/${id}`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

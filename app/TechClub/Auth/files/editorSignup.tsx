@@ -550,7 +550,7 @@ export default function SignUp() {
 
     try {
       // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/editor-signup`, {
-      const response = await fetch(`http://localhost:5000/CRAFTEDITOR-signup`, {
+      const response = await fetch(`http://localhost:5000/TECHEDITOR-signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -578,7 +578,7 @@ export default function SignUp() {
       }
 
       console.log(data)
-      router.push("/CraftClub/Auth/SignIn")
+      router.push("/TechClub/Auth/SignIn")
 
     } catch (error) {
       console.error("Network error:", error)
@@ -835,7 +835,7 @@ export default function SignUp() {
                               <SelectValue placeholder="Select category" />
                             </SelectTrigger>
                             <SelectContent>
-                              {["artclub", "Photography", "dance"].map((category) => (
+                              {["Tech"].map((category) => (
                                 <SelectItem key={category} value={category}>
                                   {category}
                                 </SelectItem>
@@ -966,7 +966,7 @@ export default function SignUp() {
                       <p className="text-sm text-gray-600">
                         Already have an account?
                         <span
-                          onClick={() => { router.push("/CraftClub/Auth/EditorSignIn") }}
+                          onClick={() => { router.push("/TechClub/Auth/EditorSignIn") }}
                           style={{ cursor: 'pointer' }} className="text-blue-600 hover:text-blue-700 font-medium">
                           Sign in
                         </span>

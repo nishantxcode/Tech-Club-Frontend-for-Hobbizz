@@ -22,22 +22,22 @@ function page() {
   // };
 
   const gotoAddActivity = () => {
-    router.push('/CraftClub/DISTRICT/AddActivities/AllActivities');
+    router.push('/TechClub/DISTRICT/AddActivities/AllActivities');
   }
 
 
   const gotohome = () => {
-    router.push('/CraftClub/DISTRICT/DirectorDashboard');
+    router.push('/TechClub/DISTRICT/DirectorDashboard');
   }
 
   const manageDistrict = () => {
-    router.push('/CraftClub/DISTRICT/Districts');
+    router.push('/TechClub/DISTRICT/Districts');
   }
   const manageRoles = () => {
-    router.push('/CraftClub/DISTRICT/ManageRoles');
+    router.push('/TechClub/DISTRICT/ManageRoles');
   }
   const manageEditor = () => {
-    router.push('/CraftClub/DISTRICT/ManageRoles/CreateEditor');
+    router.push('/TechClub/DISTRICT/ManageRoles/CreateEditor');
   }
 //   const gotoabout = () => {
 //     // router.push('../../Components/ParticipateInActivity');
@@ -50,7 +50,7 @@ function page() {
 
   const logout = () => {
     localStorage.clear()
-    router.push('/CraftClub/Auth/SignIn');
+    router.push('/TechClub/Auth/SignIn');
     // window.location.reload();
   }
 

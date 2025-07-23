@@ -21,7 +21,7 @@ export default function Component() {
   const router = useRouter();
   
   const gotoreviewactivity = () => {
-    router.push('/CraftClub/ReviewActivity');
+    router.push('/TechClub/ReviewActivity');
   };
   
 // ffgfgfg

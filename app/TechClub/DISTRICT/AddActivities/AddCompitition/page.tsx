@@ -25,7 +25,7 @@ export default function ActivityForm() {
       const router = useRouter();
     
       const gotohome = () => {
-        router.push('/Components/DISTRICT/DirectorDashboard');
+        router.push('/TechClub/DISTRICT/DirectorDashboard');
       };
     
     
@@ -105,7 +105,8 @@ export default function ActivityForm() {
 
 
     if (url) {
-      fetch(`${process.env.NEXT_PUBLIC_API_URL}/create-compitition`, {
+    //   fetch(`${process.env.NEXT_PUBLIC_API_URL}/create-compitition`, {
+        fetch(`http://localhost:5000/create-compitition`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",

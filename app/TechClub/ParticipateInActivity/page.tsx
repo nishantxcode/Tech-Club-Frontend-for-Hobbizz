@@ -37,7 +37,7 @@ function page() {
   const router = useRouter();
 
   const gotohome = () => {
-    router.push('../../Components/home');
+    router.push('../../TechClub/home');
   };
 
   const [approvals, setApprovals] = useState({})
@@ -59,7 +59,7 @@ function page() {
 
 
   const handleClickSubmitId = (id: any) => {
-    router.push(`../../Components/ParticularActivityInfo?id=${id}`);
+    router.push(`../../TechClub/ParticularActivityInfo?id=${id}`);
   };
 
 
@@ -72,7 +72,7 @@ function page() {
     //     return;
     // }
 
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/allActivities`, {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/techallActivities`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
